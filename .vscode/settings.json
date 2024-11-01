@@ -1,0 +1,11 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/wordpress/wp-content/themes/sample-housing/assets/css/",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "liveSassCompile.settings.root": "/wordpress/wp-content/themes/sample-housing/assets/sass/"
+}

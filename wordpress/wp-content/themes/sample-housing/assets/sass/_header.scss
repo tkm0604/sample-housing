@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 30px 10px 0;
+    padding: 20px 30px 31px 0px;
     
     @include mq(md){
         padding-top: 10px;
@@ -25,6 +25,7 @@ header {
     }
     &-logo{
         z-index: 10000;
+        width: 190px;
         @include mq(md){
             width: 47%;
         }

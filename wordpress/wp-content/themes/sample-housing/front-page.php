@@ -145,12 +145,10 @@
             </div>
             <div class="greeting-loop">
                 <picture>
-                    <source srcset="./assets/img/greeting-bg-txt-sp.png" media="(max-width: 787px)">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="FUJISHIRO HOUSING">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="SAMPLE HOUSING">
                 </picture>
                 <picture>
-                    <source srcset="./assets/img/greeting-bg-txt-sp.png" media="(max-width: 787px)">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="FUJISHIRO HOUSING">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="SAMPLE HOUSING">
                 </picture>
             </div>
         </div>
