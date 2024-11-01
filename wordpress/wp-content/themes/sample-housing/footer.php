@@ -35,9 +35,9 @@
                     <a href="#company">会社概要</a>
                 </li>
             </ul>
-            <a class="footer-right-privacy" href="./privacy/">個人情報保護方針</a>
+            <a class="footer-right-privacy" href="/privacy/">個人情報保護方針</a>
             <div class="btn-wrap">
-                <a class="contact-btn__link" href="./contact/">
+                <a class="contact-btn__link" href="/contact/">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg" alt="">
                     お問い合わせ
                 </a>

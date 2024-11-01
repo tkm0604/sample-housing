@@ -55,13 +55,14 @@ get_header();
         </div>
     </section>
 
-    <section class="company" id="company">
+    <section class="company fade-up-item" id="company">
         <div class="contents-inner">
-            <div class="company-left fade-up-item">
+            <div class="company-left">
                 <h2 class="section-ttl">
                     <span>Company</span>
                     会社概要
                 </h2>
+                <?php get_template_part('parts/company-tabel-content'); ?>
             </div>
         </div>
     </section>

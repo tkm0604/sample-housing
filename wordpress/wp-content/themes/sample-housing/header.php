@@ -54,19 +54,19 @@
                                     <a class="g-nav-item__link" href="/">TOP</a>
                                 </li>
                                 <li class="g-nav-item__list">
-                                    <a class="g-nav-item__link" href="#greeting">ご挨拶</a>
+                                    <a class="g-nav-item__link" href="/#greeting">ご挨拶</a>
                                 </li>
                                 <li class="g-nav-item__list">
-                                    <a class="g-nav-item__link" href="#business">事業案内</a>
+                                    <a class="g-nav-item__link" href="/#business">事業案内</a>
                                 </li>
                                 <li class="g-nav-item__list">
                                     <a class="g-nav-item__link" href="/news/">お知らせ</a>
                                 </li>
                                 <li class="g-nav-item__list">
-                                    <a class="g-nav-item__link" href="#company">会社概要</a>
+                                    <a class="g-nav-item__link" href="/#company">会社概要</a>
                                 </li>
                                 <li class="g-nav-item__list g-nav-item__privacy">
-                                    <a class="g-nav-item__link " href="./privacy/">個人情報保護方針</a>
+                                    <a class="g-nav-item__link " href="/privacy/">個人情報保護方針</a>
                                 </li>
                                 <li class="g-nav-item__list g-nav-item__contact">
                                     <div class="btn-wrap contact-btn">
