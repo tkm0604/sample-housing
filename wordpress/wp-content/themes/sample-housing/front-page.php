@@ -1,4 +1,5 @@
 <?php get_header() ?>
+
 <body>
     <header>
         <div class="header-inner">
@@ -49,7 +50,8 @@
                                 <li class="g-nav-item__list g-nav-item__contact">
                                     <div class="btn-wrap contact-btn">
                                         <a class="g-nav-item__link contact-btn__link" href="./contact/">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg"
+                                                alt="">
                                             お問い合わせ
                                         </a>
                                     </div>
@@ -57,23 +59,26 @@
                             </ul>
                             <div class="sp-menu">
                                 <div class="sp-menu-logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp-menu-logo.png" alt="藤城ハウジング">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp-menu-logo.png"
+                                        alt="藤城ハウジング">
                                 </div>
                                 <p class="sp-menu-address">〒612-8018<br>
                                     京都市京都区京都町1番地1</p>
                                 <div class="sp-menu-tel">
                                     <a href="tel:075-123-4567">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sp-phone.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sp-phone.svg"
+                                            alt="">
                                         075-123-4567</a>
                                 </div>
                                 <div class="sp-menu-time">
                                     <p class="sp-menu-time__txt">平日：9:30～17:30（水曜日除く）</p>
-                                    <p  class="sp-menu-time__txt">土日：9:00～16:00</p>
+                                    <p class="sp-menu-time__txt">土日：9:00～16:00</p>
                                     <p class="sp-menu-time__fax"><span>FAX.</span>075-654-3210</p>
                                 </div>
                                 <div class="btn-wrap contact-btn">
                                     <a class="g-nav-item__link contact-btn__link" href="./contact/">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg"
+                                            alt="">
                                         お問い合わせ
                                     </a>
                                 </div>
@@ -129,31 +134,33 @@
         <!--MV-->
         <section id="greeting" class="greetig">
             <div class="greetig-inner">
-            <div class="contents-inner">
-                <div class="section-ttl-wrap scroll-fade-up">
-                    <h2 class="section-ttl">
-                        <span>Greeting</span>
-                        ご挨拶
-                    </h2>
+                <div class="contents-inner">
+                    <div class="section-ttl-wrap scroll-fade-up">
+                        <h2 class="section-ttl">
+                            <span>Greeting</span>
+                            ご挨拶
+                        </h2>
+                    </div>
+                    <div class="greetig-txt-wrap scroll-fade-up">
+                        <p class="greetig-txt">
+                            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        </p>
+                        <p class="greetig-signature">代表取締役社長　〇〇〇〇</p>
+                    </div>
                 </div>
-                <div class="greetig-txt-wrap scroll-fade-up">
-                    <p class="greetig-txt">
-                        この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                    </p>
-                    <p class="greetig-signature">代表取締役社長　〇〇〇〇</p>
+                <div class="greeting-loop">
+                    <picture>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png"
+                            alt="SAMPLE HOUSING">
+                    </picture>
+                    <picture>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png"
+                            alt="SAMPLE HOUSING">
+                    </picture>
                 </div>
             </div>
-            <div class="greeting-loop">
-                <picture>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="SAMPLE HOUSING">
-                </picture>
-                <picture>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/greeting-bg-txt.png" alt="SAMPLE HOUSING">
-                </picture>
-            </div>
-        </div>
         </section>
-        
+
         <!--greeting-->
 
         <section id="business" class="business">
@@ -206,22 +213,26 @@
                 </h2>
                 <ul class="case-list">
                     <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/case-01.jpg" alt="施工事例">
+                        <img class="case-list-item__img"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-01.jpg" alt="施工事例">
                         <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
                         <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
                     </li>
                     <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/case-02.jpg" alt="施工事例">
+                        <img class="case-list-item__img"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-02.jpg" alt="施工事例">
                         <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
                         <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
                     </li>
                     <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/case-03.jpg" alt="施工事例">
+                        <img class="case-list-item__img"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-03.jpg" alt="施工事例">
                         <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
                         <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
                     </li>
                     <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img" src="<?php echo get_template_directory_uri(); ?>/assets/img/case-04.jpg" alt="施工事例">
+                        <img class="case-list-item__img"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-04.jpg" alt="施工事例">
                         <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
                         <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
                     </li>
@@ -238,7 +249,8 @@
                 </h2>
 
                 <div class="contact-mail  fade-up-item">
-                    <img class="contact-mail__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail-wht.svg" alt="">
+                    <img class="contact-mail__icon"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail-wht.svg" alt="">
                     <p class="contact-mail__txt">メールでお問い合わせ</p>
                     <div class="btn-wrap">
                         <a class="contact-btn__link" href="./contact/">
@@ -248,7 +260,8 @@
                 </div>
 
                 <div class="contact-phone  fade-up-item">
-                    <img class="contact-phone__icon" src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-phone-wht.svg" alt="">
+                    <img class="contact-phone__icon"
+                        src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-phone-wht.svg" alt="">
                     <p class="contact-phone__txt">075-123-4567</p>
                     <p class="contact-phone__sub">
                         平日：9:30～17:30（水曜日除く）<br>
@@ -268,31 +281,36 @@
                         お知らせ
                     </h2>
                     <div class="btn-wrap  fade-up-item">
-                        <a class="contact-btn__link" href="./news/">
+                        <a class="contact-btn__link" href="/news/">
                             一覧を見る
                         </a>
                     </div>
                 </div>
                 <div class="news-right">
                     <ul class="news-list">
-                        <li class="news-list__item  fade-up-item">
-                            <a class="news-list__link" href="./news/page.html">
-                                <span>2024.00.00</span>
-                                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                        <?php
+                        $args = array(
+                            'post_type' => 'news',
+                            'posts_per_page' => 3,
+                            'orderby' => 'date',
+                            'order' => 'DESC'
+                        );
+                        $news_archive_query = new WP_Query($args);
+                        if ($news_archive_query->have_posts()) :
+                            while ($news_archive_query->have_posts()) : $news_archive_query->the_post();
+                        ?>
+
+                        <li class="news-list__item fade-up-item">
+                            <a class="news-list__link" href="<?php the_permalink(); ?>">
+                                <span><?php echo get_the_date(); ?></span>
+                                <?php the_title(); ?>
                             </a>
                         </li>
-                        <li class="news-list__item  fade-up-item">
-                            <a class="news-list__link" href="./news/page.html">
-                                <span>2024.00.00</span>
-                                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                            </a>
-                        </li>
-                        <li class="news-list__item  fade-up-item">
-                            <a class="news-list__link" href="./news/page.html">
-                                <span>2024.00.00</span>
-                                この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
-                            </a>
-                        </li>
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        ?>
                     </ul>
                 </div>
             </div>
@@ -337,7 +355,7 @@
                     <div class="map-wrap">
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9920686386085!2d135.78060797629308!3d34.93173587078056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010fcefb7a7637%3A0xa4cf83041ebc41f8!2z77yI5qCq77yJ6Jek5Z-O44OP44Km44K444Oz44Kw!5e0!3m2!1sja!2sjp!4v1722484799100!5m2!1sja!2sjp"
-                            width="556" height="478" style="border:0;" allowfullscreen="" 
+                            width="556" height="478" style="border:0;" allowfullscreen=""
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
@@ -347,4 +365,4 @@
 
     </main>
     <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div>
-<?php get_footer() ?>
+    <?php get_footer() ?>

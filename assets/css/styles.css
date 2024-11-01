@@ -2368,7 +2368,7 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
 .privacy .privacy-contact {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: end;
   font-size: 1.6rem;
   line-height: 1.5;
   background: #fafaf8;
@@ -2445,8 +2445,8 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   display: flex;
   justify-content: space-between;
   background: #EFF6FD;
-  width: 860px;
-  margin: 0 auto 10px;
+  width: 60px;
+  margin: 0 auto;
   padding: 53px 93px;
   box-sizing: border-box;
 }
@@ -2856,7 +2856,7 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   align-items: center;
   margin-top: 56px;
   padding: 0 23px;
-  max-width: 860px;
+  max-width: 86px;
 }
 @media screen and (max-width: 767px) {
   .news-article .news-contents .article-foot {
@@ -3068,4 +3068,4 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   text-align: center;
   cursor: pointer;
   transition: 0.3s all ease-in;
-}
+}/*# sourceMappingURL=styles.css.map */

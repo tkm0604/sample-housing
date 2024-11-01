@@ -288,11 +288,11 @@
     }
 
    .greeting-loop{
-        margin-top: -65px;
+        margin-top: 25px;
         animation: infinity-scroll-left 20s infinite linear;
         white-space: nowrap;
         @include mq(md){
-           margin-top: -50px;
+           margin-top: 10px;
            width: 240%;
         }
         img{

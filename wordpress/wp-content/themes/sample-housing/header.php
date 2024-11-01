@@ -26,8 +26,9 @@
             <div class="header-content">
                 <div class="header-left">
                     <h1 id="test" class="header-left-logo">
-                        <a href="./">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="sample housing">
+                        <a href="/">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
+                                alt="sample housing">
                         </a>
                     </h1>
                     <div class="header-left-contact">
@@ -50,7 +51,7 @@
                         <div class="g-nav-inner">
                             <ul class="g-nav-item">
                                 <li class="g-nav-item__list">
-                                    <a class="g-nav-item__link" href="">TOP</a>
+                                    <a class="g-nav-item__link" href="/">TOP</a>
                                 </li>
                                 <li class="g-nav-item__list">
                                     <a class="g-nav-item__link" href="#greeting">ご挨拶</a>
@@ -59,7 +60,7 @@
                                     <a class="g-nav-item__link" href="#business">事業案内</a>
                                 </li>
                                 <li class="g-nav-item__list">
-                                    <a class="g-nav-item__link" href="./news/">お知らせ</a>
+                                    <a class="g-nav-item__link" href="/news/">お知らせ</a>
                                 </li>
                                 <li class="g-nav-item__list">
                                     <a class="g-nav-item__link" href="#company">会社概要</a>
@@ -70,7 +71,8 @@
                                 <li class="g-nav-item__list g-nav-item__contact">
                                     <div class="btn-wrap contact-btn">
                                         <a class="g-nav-item__link contact-btn__link" href="./contact/">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg" alt="">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg"
+                                                alt="">
                                             お問い合わせ
                                         </a>
                                     </div>
@@ -78,23 +80,26 @@
                             </ul>
                             <div class="sp-menu">
                                 <div class="sp-menu-logo">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="sample housing">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
+                                        alt="sample housing">
                                 </div>
                                 <p class="sp-menu-address">〒612-8018<br>
                                     京都市京都区京都町1番地2</p>
                                 <div class="sp-menu-tel">
                                     <a href="tel:075-123-4567">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sp-phone.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-sp-phone.svg"
+                                            alt="">
                                         075-123-4567</a>
                                 </div>
                                 <div class="sp-menu-time">
                                     <p class="sp-menu-time__txt">平日：9:30～17:30（水曜日除く）</p>
-                                    <p  class="sp-menu-time__txt">土日：9:00～16:00</p>
+                                    <p class="sp-menu-time__txt">土日：9:00～16:00</p>
                                     <p class="sp-menu-time__fax"><span>FAX.</span>075-654-3210</p>
                                 </div>
                                 <div class="btn-wrap contact-btn">
                                     <a class="g-nav-item__link contact-btn__link" href="./contact/">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg" alt="">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-mail.svg"
+                                            alt="">
                                         お問い合わせ
                                     </a>
                                 </div>
