@@ -22,6 +22,9 @@ function sample_housing_enqueue_scripts()
 add_action('wp_enqueue_scripts', 'sample_housing_enqueue_scripts');
 
 
+// ---------------------------------------------
+// カスタム投稿タイプ「お知らせ」
+// ---------------------------------------------
 function register_news_post_type()
 {
     $labels = array(
@@ -66,7 +69,7 @@ function add_news_rewrite_rules($wp_rewrite) {
 }
 add_filter('generate_rewrite_rules', 'add_news_rewrite_rules');
 
-// ダミー記事生成
+// 「お知らせ」ダミー記事生成
 // function create_news_dummy_posts() {
 //     // 既存の投稿を確認
 //     $existing_posts = get_posts(array(
@@ -103,3 +106,74 @@ add_filter('generate_rewrite_rules', 'add_news_rewrite_rules');
 //     }
 // }
 // add_action('init', 'create_news_dummy_posts', 20);
+
+// ---------------------------------------------
+// カスタム投稿タイプ「施工事例」
+// ---------------------------------------------
+function register_case_post_type()
+{
+    $labels = array(
+        'name'               => '施工事例',
+        'singular_name'      => '施工事例',
+        'menu_name'          => '施工事例',
+        'name_admin_bar'     => 'お知らせ施工事例',
+        'add_new'            => '新規追加',
+        'add_new_item'       => '新しい施工事例を追加',
+        'new_item'           => '新しい施工事例',
+        'edit_item'          => '施工事例を編集',
+        'view_item'          => '施工事例を見る',
+        'all_items'          => 'すべての施工事例',
+        'search_items'       => '施工事例を検索',
+        'not_found'          => '施工事例が見つかりません',
+        'not_found_in_trash' => 'ゴミ箱に施工事例はありません'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'menu_position'      => 6,
+        'menu_icon'          => 'dashicons-media-document',
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'custom-fields'),        
+        'show_in_rest'       => true
+    );
+
+    register_post_type('case', $args);
+}
+add_action('init', 'register_case_post_type');
+
+
+// ---------------------------------------------
+// カスタム投稿タイプ「ご挨拶」
+// ---------------------------------------------
+function register_greeting_post_type()
+{
+    $labels = array(
+        'name'               => 'ご挨拶',
+        'singular_name'      => 'ご挨拶',
+        'menu_name'          => 'ご挨拶',
+        'name_admin_bar'     => 'お知らせご挨拶',
+        'add_new'            => '新規追加',
+        'add_new_item'       => '新しいご挨拶を追加',
+        'new_item'           => '新しいご挨拶',
+        'edit_item'          => 'ご挨拶を編集',
+        'view_item'          => 'ご挨拶を見る',
+        'all_items'          => 'すべてのご挨拶',
+        'search_items'       => 'ご挨拶を検索',
+        'not_found'          => 'ご挨拶が見つかりません',
+        'not_found_in_trash' => 'ゴミ箱にご挨拶はありません'
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'has_archive'        => true,
+        'menu_position'      => 7,
+        'menu_icon'          => 'dashicons-media-document',
+        'supports'           => array('title', 'thumbnail', 'excerpt', 'custom-fields'),        
+        'show_in_rest'       => true
+    );
+
+    register_post_type('greeting', $args);
+}
+add_action('init', 'register_greeting_post_type');

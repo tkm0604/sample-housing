@@ -1814,20 +1814,28 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
 }
 .case .case-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 @media screen and (max-width: 767px) {
   .case .case-list {
     flex-wrap: wrap;
     row-gap: 24px;
+    justify-content: space-between;
   }
 }
 .case .case-list-item {
   width: calc((100% - 90px) / 4);
+  margin-right: 30px;
 }
 @media screen and (max-width: 767px) {
   .case .case-list-item {
     width: calc((100% - 10px) / 2);
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .case .case-list-item img {
+    width: 100%;
   }
 }
 .case .case-list-item__ttl {
@@ -1851,6 +1859,9 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
     font-size: 1.2rem;
     margin-top: 7px;
   }
+}
+.case-item:last-of-type {
+  margin-right: 0;
 }
 
 .contact {

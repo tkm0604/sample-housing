@@ -142,10 +142,25 @@
                         </h2>
                     </div>
                     <div class="greetig-txt-wrap scroll-fade-up">
+                        <?php
+                        $args = array(
+                            'post_type' => 'greeting',
+                            'posts_per_page' => 1,
+                        );
+                        $greeting_archive_query = new WP_Query($args);
+                        if ($greeting_archive_query->have_posts()) :
+                            while ($greeting_archive_query->have_posts()) : $greeting_archive_query->the_post();
+
+                        ?>
                         <p class="greetig-txt">
-                            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。
+                            <?php echo nl2br(get_field('text')); ?>
                         </p>
-                        <p class="greetig-signature">代表取締役社長　〇〇〇〇</p>
+                        <p class="greetig-signature">代表取締役社長　<?php the_field('signature'); ?></p>
+                        <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata();
+                        ?>
                     </div>
                 </div>
                 <div class="greeting-loop">
@@ -212,30 +227,28 @@
                     施工事例
                 </h2>
                 <ul class="case-list">
+                    <?php
+                    $args = array(
+                        'post_type' => 'case',
+                        'posts_per_page' => 4,
+                        'orderby' => 'date',
+                        'order' => 'DESC'
+                    );
+                    $case_archive_query = new WP_Query($args);
+                    if ($case_archive_query->have_posts()) :
+                        while ($case_archive_query->have_posts()) : $case_archive_query->the_post();
+
+                    ?>
                     <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-01.jpg" alt="施工事例">
-                        <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
-                        <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
+                        <img class="case-list-item__img" src="<?php the_field('image'); ?>" alt="施工事例">
+                        <p class="case-list-item__ttl"><?php the_title(); ?></p>
+                        <p class="case-list-item__txt"><?php the_field('comment'); ?></p>
                     </li>
-                    <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-02.jpg" alt="施工事例">
-                        <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
-                        <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                    </li>
-                    <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-03.jpg" alt="施工事例">
-                        <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
-                        <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                    </li>
-                    <li class="case-list-item  fade-up-item">
-                        <img class="case-list-item__img"
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/case-04.jpg" alt="施工事例">
-                        <p class="case-list-item__ttl">◯◯◯◯◯◯◯◯な家</p>
-                        <p class="case-list-item__txt">この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。</p>
-                    </li>
+                    <?php
+                        endwhile;
+                    endif;
+                    wp_reset_postdata();
+                    ?>
                 </ul>
             </div>
         </section>
