@@ -31,3 +31,6 @@ Thumbs.db
 
 #htmlディレクトリを管理から外す
 /html/
+
+#assetsディレクトリを管理から外す
+/assets/
