@@ -81,15 +81,8 @@ Template Name: お知らせ一覧
         </div>
     </section>
 
-    <section class="company" id="company">
-        <div class="contents-inner">
-            <div class="company-left fade-up-item">
-                <h2 class="section-ttl">
-                    <span>Company</span>
-                    会社概要
-                </h2>
-                <?php get_template_part('parts/company-tabel-content'); ?>
-            </div>
+    <section class="company  fade-up-item">
+        <?php get_template_part('parts/company-tabel-content'); ?>
     </section>
 
 

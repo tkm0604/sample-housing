@@ -54,17 +54,8 @@ get_header();
             </div>
         </div>
     </section>
-
-    <section class="company fade-up-item" id="company">
-        <div class="contents-inner">
-            <div class="company-left">
-                <h2 class="section-ttl">
-                    <span>Company</span>
-                    会社概要
-                </h2>
-                <?php get_template_part('parts/company-tabel-content'); ?>
-            </div>
-        </div>
+    <section class="company  fade-up-item">
+        <?php get_template_part('parts/company-tabel-content'); ?>
     </section>
 </main>
 <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div>

@@ -1,15 +1,14 @@
 <?php
 /*
-Template Name: 個人情報保護方針
+Template Name: お問い合わせ
 */
 ?>
 <?php get_header() ?>
-
 <main class="subpage privacy">
     <div class="mv">
         <div class="mv__inner">
             <h2 class="page-ttl">
-                <span>Privacy policy</span>
+                <span>Contact</span>
                 <?php  echo get_the_title() ?>
             </h2>
         </div>
@@ -102,12 +101,51 @@ Template Name: 個人情報保護方針
         </div>
     </section>
     <section class="company  fade-up-item">
-        <?php get_template_part('parts/company-tabel-content'); ?>
+        <div class="contents-inner">
+            <div class="company-left">
+                <h2 class="section-ttl">
+                    <span>Company</span>
+                    会社概要
+                </h2>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th> 事業所名</th>
+                            <td>Sample Housing</td>
+                        </tr>
+                        <tr>
+                            <th>代表取締役</th>
+                            <td>山田太郎</td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>20YY年M月</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>〒612-0000<br>
+                                京都市京都区京都町1番地1</td>
+                        </tr>
+                        <tr>
+                            <th> 業務内容</th>
+                            <td>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>
+                                〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="company-right">
+                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9920686386085!2d135.78060797629308!3d34.93173587078056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010fcefb7a7637%3A0xa4cf83041ebc41f8!2z77yI5qCq77yJ6Jek5Z-O44OP44Km44K444Oz44Kw!5e0!3m2!1sja!2sjp!4v1722484799100!5m2!1sja!2sjp"
+                        width="556" height="478" style="border:0;" allowfullscreen=""
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
     </section>
 
 
 </main>
 <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div>
-
 
 <?php get_footer() ?>

@@ -317,24 +317,8 @@
         </section>
         <!-- contact -->
 
-        <section class="company fade-up-item" id="company">
-            <div class="contents-inner">
-                <div class="company-left">
-                    <h2 class="section-ttl">
-                        <span>Company</span>
-                        会社概要
-                    </h2>
-                    <?php get_template_part('parts/company-tabel-content'); ?>
-                </div>
-                <div class="company-right">
-                    <div class="map-wrap">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9920686386085!2d135.78060797629308!3d34.93173587078056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010fcefb7a7637%3A0xa4cf83041ebc41f8!2z77yI5qCq77yJ6Jek5Z-O44OP44Km44K444Oz44Kw!5e0!3m2!1sja!2sjp!4v1722484799100!5m2!1sja!2sjp"
-                            width="556" height="478" style="border:0;" allowfullscreen=""
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                </div>
-            </div>
+        <section id="company" class="company  fade-up-item">
+            <?php get_template_part('parts/company-tabel-content'); ?>
         </section>
 
 
