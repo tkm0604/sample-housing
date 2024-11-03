@@ -1,0 +1,23 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/wordpress/wp-content/themes/sample-housing/assets/css"
+        }
+    ],
+    "liveSassCompile.settings.root": "/wordpress/wp-content/themes/sample-housing/assets/sass/",
+    "liveSassCompile.settings.includeItems": ["/wordpress/wp-content/themes/sample-housing/assets/sass/styles.scss"], // styles.scssのみ監視対象
+    "liveSassCompile.settings.generateMap": false,
+    "editor.formatOnSave": true,
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "intelephense.stubs": [
+        "wordpress",
+        "mysqli",
+        "json",
+        "curl",
+        "xml"
+    ]
+}
