@@ -1,21 +1,21 @@
 # WordPressのコアファイルを無視
-/wp-admin/
-/wp-includes/
-/wp-config.php
+/wordpress/wp-admin/
+/wordpress/wp-includes/
+/wordpress/wp-config.php
 
 # テーマはすべて無視。
 /wp-content/themes/*
 
 # アップロードファイルとmu-pluginsを無視（必要に応じて）
-/wp-content/uploads/
-/wp-content/mu-plugins/
+/wordpress/wp-content/uploads/
+/wordpress/wp-content/mu-plugins/
 
 # wp-content/plugins 内の特定のプラグインのみGitで管理する
 # まず全プラグインを無視
-/wp-content/plugins/*
+# /wp-content/plugins/*
 # 個別のプラグインを指定して無視を解除
-!/wp-content/plugins/プラグインフォルダ名1/
-!/wp-content/plugins/プラグインフォルダ名2/
+# !/wp-content/plugins/プラグインフォルダ名1/
+# !/wp-content/plugins/プラグインフォルダ名2/
 
 # 一般的な不要ファイルを無視
 .DS_Store
