@@ -24,128 +24,118 @@ Template Name: お問い合わせ
     <!--パンクズ-->
     <section class="privacy-contents">
         <div class="contents-inner">
-            <p class="privacy-lead fade-up-item">本ウェブサイトは、sample-housing（以下「当社」）の事業内容等を紹介するサイトです。</p>
-            <ul class="privacy-list">
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">個人情報の取り扱い</p>
-                    <p class="privacy-list__txt">
-                        当社は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。</p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">個人情報の管理</p>
-                    <p class="privacy-list__txt">
-                        当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
-                    </p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">個人情報の利用目的</p>
-                    <p class="privacy-list__txt">
-                        本ウェブサイトでは、お客様からのお問い合わせ時に、お名前、e-mailアドレス、電話番号等の個人情報をご登録いただく場合がございますが、これらの個人情報はご提供いただく際の目的以外では利用いたしません。<br>
-                        お客さまからお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。</p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">個人情報の第三者への開示・提供の禁止</p>
-                    <p class="privacy-list__txt">
-                        当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
-                    </p>
-                    <ul class="privacy-list-sub fade-up-item">
-                        <li class="privacy-list-sub__item">お客さまの同意がある場合</li>
-                        <li class="privacy-list-sub__item">お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合</li>
-                        <li class="privacy-list-sub__item">法令に基づき開示することが必要である場合</li>
-                    </ul>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">個人情報の安全対策</p>
-                    <p class="privacy-list__txt">
-                        当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。
-                    </p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">ご本人の照会</p>
-                    <p class="privacy-list__txt">
-                        お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。
-                    </p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">法令、規範の遵守と見直し</p>
-                    <p class="privacy-list__txt">当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。
-                    </p>
-                </li>
-                <li class="privacy-list__item fade-up-item">
-                    <p class="privacy-list__ttl">お問い合せ</p>
-                    <p class="privacy-list__txt">
-                        当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。
-                    </p>
-                </li>
-            </ul>
-            <div class="privacy-contact  fade-up-item">
-                <div class="privacy-contact__left">
-                    <p class="privacy-contact__ttl">Sample Housing</p>
-                    <span class="privacy-contact__line"></span>
-                    <p class="privacy-contact__add">〒612-0000<br>
-                        京都市京都区京都町1番地1
-                    </p>
-                    <p class="privacy-contact__tel">TEL. 075-123-4567</p>
-                    <p class="privacy-contact__time">9:30～17:30（水曜日・祝日除く）</p>
-                    <p class="privacy-contact__fax">FAX. 075-654-3210</p>
-                </div>
-                <div class="privacy-contact__right">
-                    <div class="btn-wrap">
-                        <a class="contact-btn__link" href="../contact/">
-                            <img src="../assets/img/icon-mail.svg" alt="">
-                            お問い合わせはこちら
-                        </a>
+            <div class="form-wrap">
+                <form action="post">
+                    <div class="contact-form">
+                        <dl class="require">
+                            <dt>お名前</dt>
+                            <dd>
+                                <input type=" text" name="name" id="name" size="60" value="" placeholder="山田 太郎">
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>お名前（ふりがな）</dt>
+                            <dd>
+                                <input type="text" name="kana" id="kana" size="60" value="" placeholder="やまだ たろう">
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>メールアドレス</dt>
+                            <dd>
+                                <input type="email" name="email" id="email" size="60" value="" placeholder="○○○○○@○○.○○"
+                                    data-conv-half-alphanumeric="true">
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>メールアドレス（確認）</dt>
+                            <dd>
+                                <input type="email" name="email" id="email" size="60" value="" placeholder="○○○○○@○○.○○"
+                                    data-conv-half-alphanumeric="true">
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>電話番号</dt>
+                            <dd class="tel-field">
+                                <input type="text" name="tel[data][0]" size="6" maxlength="5" value=""
+                                    data-conv-half-alphanumeric="true">
+                                - <input type="text" name="tel[data][1]" size="5" maxlength="4" value=""
+                                    data-conv-half-alphanumeric="true">
+                                - <input type="text" name="tel[data][2]" size="5" maxlength="4" value=""
+                                    data-conv-half-alphanumeric="true">
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>お問い合わせ項目</dt>
+                            <dd class="select-radio">
+                                <input type="radio" name="contact" id="contact-email" value="email">
+                                <label for="contact-email">Eメール</label>
+
+                                <input type="radio" name="contact" id="contact-phone" value="phone">
+                                <label for="contact-phone">電話</label>
+                            </dd>
+                        </dl>
+                        <dl class="require">
+                            <dt>希望連絡方法</dt>
+                            <dd>
+                                <select name="contact">
+                                    <option value="sell" name="contact-sale" id="contact-sale">家を売りたい</option>
+                                    <option value="buy" name="contact-rent" id="contact-rent">家を買いたい</option>
+                                </select>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>お問い合わせ内容</dt>
+                            <dd>
+                                <textarea name="message" id="message" cols="50" rows="5"
+                                    placeholder="お問い合わせ内容を入力してください"></textarea>
+                            </dd>
+                        </dl>
                     </div>
-                </div>
+                    <div class="contact-form-foot">
+                        <div class="privacy-check">
+                            <div class="privacy-check_txt">
+                                <p><span>プライバシーポリシー</span></p>
+                                <p>
+                                    当サイトでは、お問い合わせいただいた際に取得したお客様の個人情報（氏名、メールアドレスなど）は、<br class="pc-only">
+                                    お問い合わせ対応および当サイトのサービス向上のためにのみ利用いたします。<br>
+                                    第三者に提供することはなく、お客様の同意がない限り他の目的には使用いたしません。<br><br>
+                                    個人情報の取り扱いについてご質問がある場合は、当サイトの管理者までご連絡ください。</p>
+                            </div>
+                            <label>
+                                <input type="checkbox" name="privacy[data][]" value="プライバシーポリシーに同意する">
+                                <span class="mwform-checkbox-field-text">プライバシーポリシーに同意する</span>
+                            </label>
+
+                            <input type="hidden" name="privacy[separator]" value=",">
+
+                            <input type="hidden" name="__children[privacy][]" value="">
+                        </div>
+                        <div class="btn-wrap">
+                            <input type="submit" name="submitConfirm" value="確認" class="btn btn-primary btn-submit">
+                        </div>
+                    </div>
+                </form>
+
+
             </div>
         </div>
     </section>
     <section class="company  fade-up-item">
-        <div class="contents-inner">
-            <div class="company-left">
-                <h2 class="section-ttl">
-                    <span>Company</span>
-                    会社概要
-                </h2>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th> 事業所名</th>
-                            <td>Sample Housing</td>
-                        </tr>
-                        <tr>
-                            <th>代表取締役</th>
-                            <td>山田太郎</td>
-                        </tr>
-                        <tr>
-                            <th>設立</th>
-                            <td>20YY年M月</td>
-                        </tr>
-                        <tr>
-                            <th>所在地</th>
-                            <td>〒612-0000<br>
-                                京都市京都区京都町1番地1</td>
-                        </tr>
-                        <tr>
-                            <th> 業務内容</th>
-                            <td>〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇<br>
-                                〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇〇</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="company-right">
-                <div class="map-wrap">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.9920686386085!2d135.78060797629308!3d34.93173587078056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60010fcefb7a7637%3A0xa4cf83041ebc41f8!2z77yI5qCq77yJ6Jek5Z-O44OP44Km44K444Oz44Kw!5e0!3m2!1sja!2sjp!4v1722484799100!5m2!1sja!2sjp"
-                        width="556" height="478" style="border:0;" allowfullscreen=""
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+        <?php get_template_part('parts/company-tabel-content'); ?>
+
     </section>
 
 
 </main>
 <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div>
-
+<script>
+document.querySelectorAll('input[data-conv-half-alphanumeric="true"]').forEach(function(input) {
+    input.addEventListener('input', function() {
+        // 入力された値を半角英数字に変換
+        this.value = this.value.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+            return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+        });
+    });
+});
+</script>
 <?php get_footer() ?>

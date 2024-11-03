@@ -90,6 +90,15 @@
   }
 }
 
+.pc-only {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .pc-only {
+    display: none;
+  }
+}
+
 html {
   font-size: 62.5%;
   font-family: "Noto Sans CJK JP", "Noto Sans JP", "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
@@ -3068,4 +3077,152 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   text-align: center;
   cursor: pointer;
   transition: 0.3s all ease-in;
+}
+
+.form-wrap form {
+  margin: 0 auto;
+  max-width: 880px;
+}
+.form-wrap form .contact-form dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form dl {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.form-wrap form .contact-form dl dt {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  flex: 0 0 32%;
+  max-width: 32%;
+  padding: 1em 0;
+  padding-right: 40px;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form dl dt {
+    max-width: none;
+    width: auto;
+    padding-right: 0;
+  }
+}
+.form-wrap form .contact-form dl dd {
+  flex: 0 0 68%;
+  max-width: 68%;
+  padding: 1em 0;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form dl dd {
+    max-width: 100%;
+    width: 100%;
+    flex: auto;
+  }
+}
+.form-wrap form .contact-form dl dd input, .form-wrap form .contact-form dl dd textarea {
+  border: 1px solid #707070;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form dl dd input, .form-wrap form .contact-form dl dd textarea {
+    width: 100%;
+    flex: initial;
+    max-width: none;
+  }
+}
+.form-wrap form .contact-form dl .tel-field input {
+  width: 20%;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form dl .tel-field input {
+    width: 30%;
+  }
+}
+.form-wrap form .contact-form dl .select-radio input {
+  width: auto;
+}
+.form-wrap form .contact-form .require dt::after {
+  content: "必須";
+  display: inline-block;
+  padding: 0 0.5em;
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.75;
+  background: #106BB8;
+  border-radius: 3px;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form .require dt::after {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.form-wrap form input, .form-wrap form button, .form-wrap form textarea, .form-wrap form select {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+}
+.form-wrap form input {
+  padding: 0.2em;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form input {
+    width: 100%;
+  }
+}
+.form-wrap form select {
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form select {
+    font-size: 1rem;
+  }
+}
+.form-wrap form .contact-form-foot .privacy-check {
+  text-align: center;
+}
+.form-wrap form .contact-form-foot .privacy-check span {
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+.form-wrap form .contact-form-foot .privacy-check_txt {
+  margin: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap form .contact-form-foot .privacy-check_txt p:last-of-type {
+    text-align: left;
+  }
+}
+.form-wrap form .contact-form-foot .privacy-check label input {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.form-wrap form .contact-form-foot .btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.form-wrap form .contact-form-foot .btn-wrap {
+  margin-top: 20px;
+}
+.form-wrap form .contact-form-foot .btn {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 10px;
+  padding: 0.5em;
+  letter-spacing: 0.5em;
+  transition: all 0.3s;
+  color: #fff;
+  cursor: pointer;
+}
+.form-wrap form .contact-form-foot .btn:hover {
+  opacity: 0.8;
+}
+.form-wrap form .contact-form-foot .btn-submit {
+  background: #106BB8;
+  border: 1px solid #106BB8;
 }
