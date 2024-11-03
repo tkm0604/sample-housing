@@ -1,14 +1,14 @@
 # WordPressのコアファイルを無視
-/wordpress/wp-admin/
-/wordpress/wp-includes/
-/wordpress/wp-config.php
+/sample-housing/wordpress/wp-admin/
+/sample-housing/wordpress/wp-includes/
+/sample-housing/wordpress/wp-config.php
 
 # テーマはすべて無視。
-/wp-content/themes/*
+# /wp-content/themes/*
 
 # アップロードファイルとmu-pluginsを無視（必要に応じて）
-/wordpress/wp-content/uploads/
-/wordpress/wp-content/mu-plugins/
+/sample-housing/wordpress/wp-content/uploads/
+/sample-housing/wordpress/wp-content/mu-plugins/
 
 # wp-content/plugins 内の特定のプラグインのみGitで管理する
 # まず全プラグインを無視
