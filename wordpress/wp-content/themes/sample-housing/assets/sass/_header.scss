@@ -15,6 +15,7 @@ header {
     @include mq(md){
         padding-top: 10px;
         padding-right: 12px;
+        padding-bottom: 10px;
     }
 }
 
@@ -27,7 +28,7 @@ header {
         z-index: 10000;
         width: 90px;
         @include mq(md){
-            width: 47%;
+            width: 30%;
         }
     }
     &-contact {

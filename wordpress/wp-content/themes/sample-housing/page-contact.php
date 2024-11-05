@@ -353,7 +353,7 @@ get_header();
                 //メールの送信処理
 
                 // 管理者宛のメール送信
-                $to_admin = 'gu.jp0604@gmail.com';
+                $to_admin = 'info-ivory-tower@ivorytower-lab.ivory.ne.jp';
                 $subject_admin = 'お問い合わせがありました。';
 
                 // メッセージ内容を一つの文字列にまとめる
@@ -366,7 +366,7 @@ get_header();
                     "お問い合わせ項目: " . esc_html($_POST['contact_option'] === 'sell' ? '家を売りたい' : ($_POST['contact_option'] === 'buy' ? '家を買いたい' : 'その他')) . "\n" .
                     "お問い合わせ内容: " . esc_html($_POST['message']);
 
-                $headers_admin = 'From: gu.jp0604@gmail.com';
+                $headers_admin = 'From: Sample-Housing <info-ivory-tower@ivorytower-lab.ivory.ne.jp>';
 
                 //メールを送信
                 wp_mail($to_admin, $subject_admin, $message_admin, $headers_admin);
@@ -384,7 +384,7 @@ get_header();
                     "お問い合わせ項目: " . esc_html($_POST['contact_option'] === 'sell' ? '家を売りたい' : ($_POST['contact_option'] === 'buy' ? '家を買いたい' : 'その他')) . "\n" .
                     "お問い合わせ内容: " . esc_html($_POST['message']) .
                     $_POST['user_name'] . "様\n\nお問い合わせいただき、ありがとうございます。\n上記内容でお問い合わせを受け付けました。\n内容を確認のうえ、後ほどご連絡いたします。";
-                $headers_user = 'From:gu.jp0604@gmail.com';
+                $headers_user = 'From : Sample-Housing info-ivory-tower@ivorytower-lab.ivory.ne.jp';
 
                 wp_mail($to_user, $subject_user, $message_user, $headers_user)
         ?>
