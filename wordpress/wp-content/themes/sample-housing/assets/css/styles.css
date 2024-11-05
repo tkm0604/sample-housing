@@ -716,7 +716,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 30px 31px 0px;
+  padding: 20px 30px 20px 0px;
 }
 @media screen and (max-width: 767px) {
   .header-content {
@@ -735,7 +735,7 @@ header {
 }
 .header-left-logo {
   z-index: 10000;
-  width: 190px;
+  width: 90px;
 }
 @media screen and (max-width: 767px) {
   .header-left-logo {
@@ -3090,9 +3090,19 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   transition: 0.3s all ease-in;
 }
 
-.form-wrap form {
+.form-wrap {
   margin: 0 auto;
-  max-width: 880px;
+  max-width: 920px;
+  padding: 0 20px;
+}
+.form-wrap h3 {
+  margin: 20px;
+  font-size: 2rem;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap h3 {
+    font-size: 1.6rem;
+  }
 }
 .form-wrap form .contact-form dl {
   display: flex;
@@ -3114,31 +3124,37 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
   max-width: 32%;
   padding: 1em 0;
   padding-right: 40px;
+  font-size: 1.4rem;
 }
 @media screen and (max-width: 767px) {
   .form-wrap form .contact-form dl dt {
     max-width: none;
     width: auto;
     padding-right: 0;
+    font-size: 1.2rem;
   }
 }
 .form-wrap form .contact-form dl dd {
   flex: 0 0 68%;
   max-width: 68%;
   padding: 1em 0;
+  font-size: 1.4rem;
 }
 @media screen and (max-width: 767px) {
   .form-wrap form .contact-form dl dd {
     max-width: 100%;
     width: 100%;
     flex: auto;
+    font-size: 1.2rem;
   }
 }
-.form-wrap form .contact-form dl dd input, .form-wrap form .contact-form dl dd textarea {
+.form-wrap form .contact-form dl dd input,
+.form-wrap form .contact-form dl dd textarea {
   border: 1px solid #707070;
 }
 @media screen and (max-width: 767px) {
-  .form-wrap form .contact-form dl dd input, .form-wrap form .contact-form dl dd textarea {
+  .form-wrap form .contact-form dl dd input,
+  .form-wrap form .contact-form dl dd textarea {
     width: 100%;
     flex: initial;
     max-width: none;
@@ -3171,7 +3187,10 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
     font-size: 1rem;
   }
 }
-.form-wrap form input, .form-wrap form button, .form-wrap form textarea, .form-wrap form select {
+.form-wrap form input,
+.form-wrap form button,
+.form-wrap form textarea,
+.form-wrap form select {
   -webkit-appearance: auto;
      -moz-appearance: auto;
           appearance: auto;
@@ -3236,4 +3255,57 @@ footer .fixed-footer__right .btn-wrap .contact-btn__link img {
 .form-wrap form .contact-form-foot .btn-submit {
   background: #106BB8;
   border: 1px solid #106BB8;
+}
+.form-wrap .error-message {
+  color: #D8000C;
+  font-size: 1rem;
+}
+.form-wrap .tel-field-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  gap: 20px;
+}
+.form-wrap .send-wrap {
+  display: flex;
+  justify-content: center;
+  max-width: 420px;
+  margin: 20px auto;
+  gap: 20px;
+}
+.form-wrap .send-wrap form {
+  width: 48%;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap .send-wrap form {
+    width: 30%;
+  }
+}
+.form-wrap .send-wrap .btn-submit {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 10px;
+  padding: 0.5em;
+  letter-spacing: 0.5em;
+  transition: all 0.3s;
+  color: #106BB8;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #106BB8;
+}
+.form-wrap .send-wrap .btn-submit:hover {
+  color: #fff;
+  background: #106BB8;
+  border: #106BB8;
+}
+.form-wrap .form-status {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 20px auto;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .form-wrap .form-status {
+    font-size: 1.6rem;
+  }
 }

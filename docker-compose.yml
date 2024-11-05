@@ -37,6 +37,10 @@ services:
       - "8080:80"
     depends_on:
       - db
-
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - "8025:8025"  # ブラウザで確認するためのポート
+      - "1025:1025"  # WordPressのSMTP設定で指定するポート
 volumes:
   db_data:

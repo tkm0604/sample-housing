@@ -7,16 +7,6 @@
 /wordpress/wp-content/themes/*
 !/wordpress/wp-content/themes/sample-housing/
 
-# アップロードファイルとmu-pluginsを無視（必要に応じて）
-# /wordpress/wp-content/uploads/
-# /wordpress/wp-content/mu-plugins/
-
-# wp-content/plugins 内の特定のプラグインのみGitで管理する
-# まず全プラグインを無視
-# /wp-content/plugins/*
-# 個別のプラグインを指定して無視を解除
-# !/wp-content/plugins/プラグインフォルダ名1/
-# !/wp-content/plugins/プラグインフォルダ名2/
 
 # 一般的な不要ファイルを無視
 .DS_Store
