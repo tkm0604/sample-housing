@@ -245,7 +245,6 @@
         <?php get_template_part('parts/company-tabel-content'); ?>
     </section>
 
-
 </main>
 <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div>
 <?php get_footer() ?>

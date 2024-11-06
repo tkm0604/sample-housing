@@ -64,7 +64,7 @@ get_header();
                     <dl class="require">
                         <dt>お名前</dt>
                         <dd>
-                            <input type=" text" name="user_name" id="name" size="60"
+                            <input type="text" name="user_name" id="name" size="60"
                                 value="<?php echo esc_attr($_POST['user_name'] ?? '') ?>" placeholder="山田 太郎">
                             <?php if (!empty($errors['user_name'])) : ?>
                             <p class=" error-message"><?php echo esc_html($errors['user_name']); ?></p>
@@ -200,156 +200,158 @@ get_header();
                     </div>
                 </div>
             </form>
-        </div>
 
 
 
-        <!-- 確認画面 -->
-        <?php elseif ($form_step === 'confirm') : ?>
-        <?php // HoneypotとNonceの検証
+
+            <!-- 確認画面 -->
+            <?php elseif ($form_step === 'confirm') : ?>
+            <?php // HoneypotとNonceの検証
                 if (!empty($_POST['honeypot'])) : ?>
-        <p>エラー: スパムの可能性があります。</p>
-        <?php
+            <p>エラー: スパムの可能性があります。</p>
+            <?php
                 elseif (!isset($_POST['contact_form_nonce']) || !wp_verify_nonce(
                     $_POST['contact_form_nonce'],
                     'contact_form_action'
                 )) : ?>
-        <p>エラー: 認証に失敗しました。</p>
+            <p>エラー: 認証に失敗しました。</p>
 
-        <?php else : ?>
+            <?php else : ?>
 
-        <!-- 入力内容確認画面 -->
-        <h3>入力内容確認画面</h3>
-        <form>
-            <div class="contact-form">
-                <dl class="require">
-                    <dt>お名前</dt>
-                    <dd>
-                        <p class="confirm-txt"><?php echo esc_attr($_POST['user_name']) ?></p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>お名前（ふりがな）</dt>
-                    <dd>
-                        <p class="confirm-txt"><?php echo esc_attr($_POST['kana']) ?></p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>メールアドレス</dt>
-                    <dd>
-                        <p class="confirm-txt"><?php echo esc_attr($_POST['user_email']) ?></p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>メールアドレス（確認）</dt>
-                    <dd>
-                        <p class="confirm-txt"><?php echo esc_attr($_POST['check_user_email']) ?></p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>電話番号</dt>
-                    <dd class="tel-field tel-field-wrap">
-                        <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][0] ?? ''); ?></p>
-                        - <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][1] ?? ''); ?></p>
-                        - <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][2] ?? ''); ?></p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>お問い合わせ項目</dt>
-                    <dd class="select-radio">
-                        <p>
-                            <?php echo esc_html($_POST['contact_option'] === 'sell' ? '家を売りたい' : ($_POST['contact_option'] === 'buy' ? '家を買いたい' : 'その他')) ?>
-                        </p>
-                    </dd>
-                </dl>
-                <dl class="require">
-                    <dt>希望連絡方法</dt>
-                    <dd>
-                        <p>
-                            <?php echo (isset($_POST['contact_method']) ? esc_html($_POST['contact_method'] === 'email' ? 'Eメール' :
+            <!-- 入力内容確認画面 -->
+            <h3>入力内容確認画面</h3>
+            <form>
+                <div class="contact-form">
+                    <dl class="require">
+                        <dt>お名前</dt>
+                        <dd>
+                            <p class="confirm-txt"><?php echo esc_attr($_POST['user_name']) ?></p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>お名前（ふりがな）</dt>
+                        <dd>
+                            <p class="confirm-txt"><?php echo esc_attr($_POST['kana']) ?></p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>メールアドレス</dt>
+                        <dd>
+                            <p class="confirm-txt"><?php echo esc_attr($_POST['user_email']) ?></p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>メールアドレス（確認）</dt>
+                        <dd>
+                            <p class="confirm-txt"><?php echo esc_attr($_POST['check_user_email']) ?></p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>電話番号</dt>
+                        <dd class="tel-field tel-field-wrap">
+                            <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][0] ?? ''); ?></p>
+                            - <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][1] ?? ''); ?></p>
+                            - <p class="confirm-txt"><?php echo esc_attr($_POST['tel']['data'][2] ?? ''); ?></p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>お問い合わせ項目</dt>
+                        <dd class="select-radio">
+                            <p>
+                                <?php echo esc_html($_POST['contact_option'] === 'sell' ? '家を売りたい' : ($_POST['contact_option'] === 'buy' ? '家を買いたい' : 'その他')) ?>
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="require">
+                        <dt>希望連絡方法</dt>
+                        <dd>
+                            <p>
+                                <?php echo (isset($_POST['contact_method']) ? esc_html($_POST['contact_method'] === 'email' ? 'Eメール' :
                                     '電話') : '未選択'); ?>
-                        </p>
-                    </dd>
-                </dl>
-                <dl>
-                    <dt>お問い合わせ内容</dt>
-                    <dd>
-                        <p>
-                            <?php echo esc_html($_POST['message']) ?>
-                        </p>
-                    </dd>
-                </dl>
-            </div>
-        </form>
-        <div class="send-wrap">
-            <form method="post" action="/contact">
-                <div class="btn-wrap">
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>お問い合わせ内容</dt>
+                        <dd>
+                            <p>
+                                <?php echo esc_html($_POST['message']) ?>
+                            </p>
+                        </dd>
+                    </dl>
+                </div>
+            </form>
+            <div class="send-wrap">
+                <form method="post" action="/contact">
+                    <div class="btn-wrap">
+                        <!-- 入力内容を保持するhiddenフィールド -->
+                        <input type="hidden" name="form_step" value="edit">
+                        <input type="hidden" name="user_name" value="<?php echo esc_html($_POST['user_name']); ?>">
+                        <input type="hidden" name="kana" value="<?php echo esc_html($_POST['kana']); ?>">
+                        <input type="hidden" name="user_email" value="<?php echo esc_html($_POST['user_email']); ?>">
+                        <input type="hidden" name="check_user_email"
+                            value="<?php echo esc_html($_POST['check_user_email']); ?>">
+
+                        <input type="hidden" name="tel[data][0]"
+                            value="<?php echo esc_html($_POST['tel']['data'][0] ?? ''); ?>">
+                        <input type="hidden" name="tel[data][1]"
+                            value="<?php echo esc_html($_POST['tel']['data'][1] ?? ''); ?>">
+                        <input type="hidden" name="tel[data][2]"
+                            value="<?php echo esc_html($_POST['tel']['data'][2] ?? ''); ?>">
+
+                        <input type="hidden" name="contact_method"
+                            value="<?php echo esc_html($_POST['contact_method']); ?>">
+                        <input type="hidden" name="contact_option"
+                            value="<?php echo esc_html($_POST['contact_option']); ?>">
+                        <input type="hidden" name="message" value="<?php echo esc_html($_POST['message']); ?>">
+
+                        <!-- 戻るボタン -->
+                        <input type="submit" name="edit" value="戻る" class="btn btn-primary btn-submit">
+                    </div>
+                </form>
+
+                <!-- 送信ボタン -->
+                <form method="post" action="/contact">
                     <!-- 入力内容を保持するhiddenフィールド -->
-                    <input type="hidden" name="form_step" value="edit">
+                    <input type="hidden" name="form_step" value="complete">
+                    <!-- Nonceをhiddenフィールドに追加 -->
+                    <input type="hidden" name="contact_form_nonce" value="<?php echo esc_attr($contact_form_nonce); ?>">
+                    <!-- お名前をhiddenフィールドに追加 -->
                     <input type="hidden" name="user_name" value="<?php echo esc_html($_POST['user_name']); ?>">
+                    <!-- お名前（ふりがな）をhiddenフィールドに追加 -->
                     <input type="hidden" name="kana" value="<?php echo esc_html($_POST['kana']); ?>">
+                    <!-- メールアドレスをhiddenフィールドに追加 -->
                     <input type="hidden" name="user_email" value="<?php echo esc_html($_POST['user_email']); ?>">
+                    <!-- メールアドレス（確認）をhiddenフィールドに追加 -->
                     <input type="hidden" name="check_user_email"
                         value="<?php echo esc_html($_POST['check_user_email']); ?>">
-
+                    <!-- 電話番号の各パートをhiddenフィールドに追加 -->
                     <input type="hidden" name="tel[data][0]"
                         value="<?php echo esc_html($_POST['tel']['data'][0] ?? ''); ?>">
                     <input type="hidden" name="tel[data][1]"
                         value="<?php echo esc_html($_POST['tel']['data'][1] ?? ''); ?>">
                     <input type="hidden" name="tel[data][2]"
                         value="<?php echo esc_html($_POST['tel']['data'][2] ?? ''); ?>">
-
+                    <!-- 希望連絡方法をhiddenフィールドに追加 -->
                     <input type="hidden" name="contact_method"
                         value="<?php echo esc_html($_POST['contact_method']); ?>">
+                    <!-- お問い合わせ項目をhiddenフィールドに追加 -->
                     <input type="hidden" name="contact_option"
                         value="<?php echo esc_html($_POST['contact_option']); ?>">
+                    <!-- お問い合わせ内容をhiddenフィールドに追加 -->
                     <input type="hidden" name="message" value="<?php echo esc_html($_POST['message']); ?>">
 
-                    <!-- 戻るボタン -->
-                    <input type="submit" name="edit" value="戻る" class="btn btn-primary btn-submit">
-                </div>
-            </form>
+                    <input type="hidden" name="privacy" value="プライバシーポリシーに同意する" checked>
 
-            <!-- 送信ボタン -->
-            <form method="post" action="/contact">
-                <!-- 入力内容を保持するhiddenフィールド -->
-                <input type="hidden" name="form_step" value="complete">
-                <!-- Nonceをhiddenフィールドに追加 -->
-                <input type="hidden" name="contact_form_nonce" value="<?php echo esc_attr($contact_form_nonce); ?>">
-                <!-- お名前をhiddenフィールドに追加 -->
-                <input type="hidden" name="user_name" value="<?php echo esc_html($_POST['user_name']); ?>">
-                <!-- お名前（ふりがな）をhiddenフィールドに追加 -->
-                <input type="hidden" name="kana" value="<?php echo esc_html($_POST['kana']); ?>">
-                <!-- メールアドレスをhiddenフィールドに追加 -->
-                <input type="hidden" name="user_email" value="<?php echo esc_html($_POST['user_email']); ?>">
-                <!-- メールアドレス（確認）をhiddenフィールドに追加 -->
-                <input type="hidden" name="check_user_email"
-                    value="<?php echo esc_html($_POST['check_user_email']); ?>">
-                <!-- 電話番号の各パートをhiddenフィールドに追加 -->
-                <input type="hidden" name="tel[data][0]"
-                    value="<?php echo esc_html($_POST['tel']['data'][0] ?? ''); ?>">
-                <input type="hidden" name="tel[data][1]"
-                    value="<?php echo esc_html($_POST['tel']['data'][1] ?? ''); ?>">
-                <input type="hidden" name="tel[data][2]"
-                    value="<?php echo esc_html($_POST['tel']['data'][2] ?? ''); ?>">
-                <!-- 希望連絡方法をhiddenフィールドに追加 -->
-                <input type="hidden" name="contact_method" value="<?php echo esc_html($_POST['contact_method']); ?>">
-                <!-- お問い合わせ項目をhiddenフィールドに追加 -->
-                <input type="hidden" name="contact_option" value="<?php echo esc_html($_POST['contact_option']); ?>">
-                <!-- お問い合わせ内容をhiddenフィールドに追加 -->
-                <input type="hidden" name="message" value="<?php echo esc_html($_POST['message']); ?>">
+                    <!-- 送信ボタン -->
+                    <input type="submit" name="complete" value="送信" class="btn btn-primary btn-submit">
+                </form>
+            </div>
+            <?php endif ?>
 
-                <input type="hidden" name="privacy" value="プライバシーポリシーに同意する" checked>
-
-                <!-- 送信ボタン -->
-                <input type="submit" name="complete" value="送信" class="btn btn-primary btn-submit">
-            </form>
-        </div>
-        <?php endif ?>
-
-        <!-- 完了画面 -->
-        <?php elseif ($form_step === 'complete') : ?>
-        <?php
+            <!-- 完了画面 -->
+            <?php elseif ($form_step === 'complete') : ?>
+            <?php
                 //メールの送信処理
 
                 // 管理者宛のメール送信
@@ -390,9 +392,9 @@ get_header();
         ?>
 
 
-        <p class="form-status">送信が完了しました</p>
-        <?php endif; ?>
-    </div>
+            <p class="form-status">送信が完了しました</p>
+            <?php endif; ?>
+        </div>
     </div>
 </main>
 <!-- <div class="gotop show" id="goTop"><a href="#"><span class="dli-arrow-up"></span>TOP</a></div> -->
