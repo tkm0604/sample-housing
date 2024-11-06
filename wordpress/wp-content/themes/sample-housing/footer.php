@@ -2,7 +2,7 @@
     <div class="footer-inner">
         <div class="footer-left">
             <img class="footer-left-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
-                alt="sample housing">
+                alt="sample housing" width="190" height="95">
             <div class="footer-left-address">
                 <p class="footer-left-address__txt">〒612-8018</p>
                 <p class="footer-left-address__txt">京都市京都区京都町1番地1</p>
