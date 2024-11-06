@@ -354,7 +354,7 @@ get_header();
 
                 // 管理者宛のメール送信
                 $to_admin = 'info-ivory-tower@ivorytower-lab.ivory.ne.jp';
-                $subject_admin = 'お問い合わせがありました。';
+                $subject_admin = 'Sample-Housingへお問い合わせがありました。';
 
                 // メッセージ内容を一つの文字列にまとめる
                 $message_admin =
@@ -373,7 +373,7 @@ get_header();
 
                 // ユーザー宛の確認メール送信
                 $to_user = sanitize_email($_POST['user_email']);
-                $subject_user = 'お問い合わせありがとうございます。';
+                $subject_user = 'Sample-Housingへお問い合わせありがとうございます。';
                 // メッセージ内容を一つの文字列にまとめる
                 $message_user =
                     "お名前: " . esc_html($_POST['user_name']) . "\n" .
@@ -382,9 +382,9 @@ get_header();
                     "電話番号: " . esc_html($_POST['tel']['data'][0] . '-' . $_POST['tel']['data'][1] . '-' . $_POST['tel']['data'][2]) . "\n" .
                     "希望連絡方法: " . (isset($_POST['contact_method']) ? esc_html($_POST['contact_method'] === 'email' ? 'Eメール' : '電話') : '未選択') . "\n" .
                     "お問い合わせ項目: " . esc_html($_POST['contact_option'] === 'sell' ? '家を売りたい' : ($_POST['contact_option'] === 'buy' ? '家を買いたい' : 'その他')) . "\n" .
-                    "お問い合わせ内容: " . esc_html($_POST['message']) .
-                    $_POST['user_name'] . "様\n\nお問い合わせいただき、ありがとうございます。\n上記内容でお問い合わせを受け付けました。\n内容を確認のうえ、後ほどご連絡いたします。";
-                $headers_user = 'From : Sample-Housing info-ivory-tower@ivorytower-lab.ivory.ne.jp';
+                    "お問い合わせ内容: " . esc_html($_POST['message']) ."\n\n".
+                    $_POST['user_name'] . "様\nお問い合わせいただき、ありがとうございます。\n上記内容でお問い合わせを受け付けました。\n内容を確認のうえ、後ほどご連絡いたします。";
+                    $headers_user =  'From: Sample-Housing <info-ivory-tower@ivorytower-lab.ivory.ne.jp>';
 
                 wp_mail($to_user, $subject_user, $message_user, $headers_user)
         ?>
