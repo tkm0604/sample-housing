@@ -20,19 +20,19 @@
         <div class="footer-right">
             <ul class="footer-right-list">
                 <li class="footer-right-list__item">
-                    <a href="">TOP</a>
+                    <a href="/">TOP</a>
                 </li>
                 <li class="footer-right-list__item">
-                    <a href="#greeting">ご挨拶</a>
+                    <a href="/#greeting">ご挨拶</a>
                 </li>
                 <li class="footer-right-list__item">
-                    <a href="#business">事業案内</a>
+                    <a href="/#business">事業案内</a>
                 </li>
                 <li class="footer-right-list__item">
-                    <a href="/news">お知らせ</a>
+                    <a href="/news/">お知らせ</a>
                 </li>
                 <li class="footer-right-list__item">
-                    <a href="#company">会社概要</a>
+                    <a href="/#company">会社概要</a>
                 </li>
             </ul>
             <a class="footer-right-privacy" href="/privacy/">個人情報保護方針</a>

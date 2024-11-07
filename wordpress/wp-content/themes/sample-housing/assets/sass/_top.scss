@@ -113,6 +113,10 @@
             margin-top: -9px;
         }
 
+        @include mq (desktop-l-min){
+            bottom: -5vw;
+        }
+
         .mv-notice {
             font-size: 1.2rem;
             margin-top: 10px;

@@ -1,6 +1,6 @@
 // color ssettings
 $white: #fff !default;
-$yellow: #F2BC09 !default;
+$yellow: #87B4DB !default;
 $black: #000 !default;
 $black2: #222 !default;
 $gray: #666 !default;
@@ -8,7 +8,7 @@ $gray-second: #888 !default;
 $bg-color: #EFF6FD !default;
 $error-message: #D8000C !default;
 // site color
-$primary: #106BB8;
+$primary: #0E62A0;
 $secondary: #87B4DB;
 
 
@@ -94,6 +94,7 @@ $breakpoints: (
   'xxl': 'screen and (max-width: 1439px)',
   'xxl-min': 'screen and (min-width: 1440px)',
   'desktop-min': 'screen and (min-width: 1600px)',
+  'desktop-l-min': 'screen and (min-width: 1920px)',
 ) !default;
 
 @mixin mq($breakpoint: sm) {

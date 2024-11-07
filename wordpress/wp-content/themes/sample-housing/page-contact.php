@@ -208,13 +208,13 @@ get_header();
             <?php elseif ($form_step === 'confirm') : ?>
             <?php // HoneypotとNonceの検証
                 if (!empty($_POST['honeypot'])) : ?>
-            <p>エラー: スパムの可能性があります。</p>
+            <p class="form_error">エラー: スパムの可能性があります。</p>
             <?php
                 elseif (!isset($_POST['contact_form_nonce']) || !wp_verify_nonce(
                     $_POST['contact_form_nonce'],
                     'contact_form_action'
                 )) : ?>
-            <p>エラー: 認証に失敗しました。</p>
+            <p class="form_error">エラー: 認証に失敗しました。</p>
 
             <?php else : ?>
 
